@@ -1,0 +1,169 @@
+:root {
+    --primary-color: black;
+    --white-color: white;
+    --gap: 3rem;  
+    --light-gray-color: #cbcbcb;
+    --secondary-color: rgb(122, 17, 122);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.main-bg {
+    background-image: url("../img/diamond-sunset.svg");
+    background-size: cover;
+    background-position: center center;
+    color: var(--primary-color);
+}
+
+.white-bg {
+    background: var(--white-color);
+}
+
+.main-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 11rem var(--gap); /* Reduzi o padding superior para subir o conteúdo */
+}
+
+.section {
+    min-height: 80vh; /* Reduzi para evitar excesso de espaço */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.menu-spacing {
+    min-height: 5rem;
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Ajustei para proporções mais equilibradas */
+    gap: var(--gap);
+    align-items: center; /* Centraliza verticalmente os filhos */
+    min-height: 80vh; /* Reduzi para evitar excesso de espaço */
+}
+
+.intro-text-content, .intro-img, .intro-img-contact {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.intro-text-content h2 {
+    font-size: 6rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.intro-img img {
+    display: block;
+    max-width: 100%; /* Removi o posicionamento absoluto e ajustei para ocupar o espaço natural */
+    height: auto;
+}
+
+.top3-content {
+    max-width: 80rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    min-height: 100vh;
+    text-align: center;
+    font-size: 2.6rem;
+}
+
+.grid-one-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: var(--white-color);
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter;
+    width: 100%;
+}
+
+.grid-main-heading {
+    padding-bottom: 1rem;
+    padding-right: 3rem;
+}
+
+.grid-description {
+    padding-bottom: 5rem;
+}
+
+.gallery-img {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-img img {
+    transition: all 250ms ease-in-out;
+}
+
+.gallery-img img:hover {
+    transform: translate(3%, 3%) scale(1.2) rotate(5deg);
+}
+
+.intro-img-contact img {
+    display: block;
+    max-width: 2rem;
+    height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .intro-content {
+        grid-template-columns: 1fr; /* Empilha em telas menores */
+        text-align: center;
+    }
+
+    .intro-text-content h2 {
+        font-size: 4rem;
+    }
+
+    .intro-text-content p {
+        font-size: 1.8rem;
+    }
+
+    .intro-img img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .main-content {
+        padding: 2rem var(--gap);
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-text-content h2 {
+        font-size: 3rem;
+    }
+
+    .intro-text-content p {
+        font-size: 1.5rem;
+    }
+}

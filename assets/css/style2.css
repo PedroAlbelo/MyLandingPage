@@ -1,0 +1,67 @@
+.footer {
+    background: var(--primary-color); /* Fundo escuro para contraste */
+    color: var(--white-color);
+    padding: 2rem 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    position: relative;
+    border-top: 0.3rem solid var(--secondary-color); /* Borda superior com a cor secundária */
+}
+
+.footer-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 var(--gap);
+}
+
+.footer p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.footer .heart {
+    color:  #72147e80; /* Vermelho para o coração */
+    font-size: 4em;
+    display: inline-block;
+    animation: pulse 1.5s infinite ease-in-out; /* Animação de pulsar */
+}
+
+/* Animação de pulsar para o coração */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 1.4rem;
+        padding: 1.5rem 0;
+    }
+
+    .footer .heart {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        font-size: 1.2rem;
+        padding: 1rem 0;
+    }
+
+    .footer .heart {
+        font-size: 1.6rem;
+    }
+}

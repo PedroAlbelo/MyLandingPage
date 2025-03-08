@@ -1,0 +1,73 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 0.3rem solid var(--light-gray-color);
+    z-index: 1;
+    background: var(--white-color); /* Adicionei fundo para consistência */
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.menu h1 {
+    font-size: 5rem;
+    color: var(--primary-color);
+}
+
+.menu a {
+    color: inherit;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background: var(--secondary-color);
+    transition: all 200ms ease-in-out;
+}
+
+.menu ul li a:hover::after {
+    width: 50%;
+    left: 25%;
+}
+
+/* Responsividade para o menu */
+@media (max-width: 768px) {
+    .menu h1 {
+        font-size: 3rem;
+    }
+
+    .menu ul li a {
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+}
